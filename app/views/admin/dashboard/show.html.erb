@@ -1,2 +1,22 @@
 <h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<div class="card">
+  <div class="card-header">
+    Products
+  </div>
+  <div class="card-body">
+    <p class="card-text">We have a stock of <%= @productsCount %> different plants in the store.</p>
+    <a href="/admin/products" class="btn btn-primary">Check it out</a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    Category
+  </div>
+  <div class="card-body">
+    <p class="card-text">We have <%= @categoryCount %> different categories of plants.</p>
+    <a href="/admin/products" class="btn btn-primary">Check it out</a>
+  </div>
+</div>
+
+
