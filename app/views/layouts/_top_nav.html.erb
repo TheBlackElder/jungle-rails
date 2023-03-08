@@ -9,6 +9,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky-nav">
   <div class="container">
     <a class="navbar-brand" href="<%= root_path %>">Jungle</a>
+
     <button
       class="navbar-toggler"
       type="button"
@@ -41,7 +42,11 @@
             <% end %>
           <%# </ul>
         </li> %>
+        <li class="nav-item">
+        <%= link_to 'About', '/about',  class: "nav-link" %>
+      </li>
       </ul>
+
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
           <a
@@ -52,7 +57,9 @@
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
+
             Admin
+         
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
             <li><%= link_to 'Dashboard', [:admin, :root], class: "nav-link" %></li>
