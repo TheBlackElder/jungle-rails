@@ -50,10 +50,43 @@ RSpec.describe User, type: :model do
       expect(@user2.errors.full_messages).to include("Email has already been taken")
     end
   
-
-
  
   end
+
+  describe '.authenticate_with_credentials' do
+
+
+    it "returns user object for valid email and password" do 
+     User.create(email: "elisabeth@email.com", password: "easyEver", password_confirmation: "easyEver")
+      result = User.authenticate_with_credentials("elisabeth@email.com", "easyEver")
+      expect(result).not_to be_nil
+      expect(result).to be_a User
+    end
+
+    it "returns nil for invalid email " do 
+      result = User.authenticate_with_credentials("elisabetthy@email.com", "easyEver")
+    expect(result).to be_nil 
+    
+    end
+
+    it "returns nil for invalid password" do 
+    result = User.authenticate_with_credentials("elisabetthy@email.com", "easiestEver")
+    expect(result).to be_nil 
+    end
+
+    it "returns valid email even with spaces" do 
+      result = User.authenticate_with_credentials("  elisabeth@email.com  ", "easyEver")
+      expect(result).to be_a User
+    end
+
+
+    it "returns valid email without case sensitivity" do 
+      result = User.authenticate_with_credentials("ELISABETH@EMAIL.COM", "easyEver")
+      expect(result).to be_a User
+    end
+
+  end 
+
 
 end
 
