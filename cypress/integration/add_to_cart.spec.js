@@ -10,11 +10,11 @@ describe("Visiting the homepage", () => {
     cy.get(".products article").should("be.visible");
   });
 
-  it("There is 12 products on the page", () => {
+  it("There is 2 products on the page", () => {
     cy.get(".products article").should("have.length", 2);
   });
   
-  
+
   it("should click on add cart button", () => {
     cy.get('#navbarSupportedContent > :nth-child(2) > :nth-child(2) > .nav-link').should('contain', '0');
     cy.get(':nth-child(1) > div > .button_to > .btn').click({force: true});
