@@ -1,9 +1,10 @@
 # Jungle
 
-A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
 Jungle is a mini e-commerce application built with Rails 6.1. It's a family-run plant store located in downtown Toronto near Scarborough Village with a wide selection of common and uncommon houseplants.
 
-![screen-gif](https://github.com/TheBlackElder/lhl-scheduler/blob/master/docs/Scheduler.gif?raw=true)
+![screenshot](https://github.com/TheBlackElder/jungle-rails/blob/master/app/assets/images/Jungle_add_plant.png?raw=true)
+![screenshot](https://github.com/TheBlackElder/jungle-rails/blob/master/app/assets/images/Jungle_product_page.png?raw=true)
+![screenshot](https://github.com/TheBlackElder/jungle-rails/blob/master/app/assets/images/Jungle_cart.png?raw=true)
 
 ## Setup
 
